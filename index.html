@@ -8,17 +8,14 @@ Update or confirm these values before publishing:
 - GitHub profile: https://github.com/miss-blue
 - Jobstreet profile: https://ph.jobstreet.com/profiles/ricamay-simbulan-hBLGWqVy5h
 - Email address: simbulanricamay18@gmail.com
-- Hero field: [Your Field]
-- CV file path: [ADD-CV-PDF-FILENAME].pdf
-- Bio sentences: [Replace each bracketed bio sentence]
-- Quote / fun fact: [Add your quote or fun fact]
-- Project cards: [Project titles, descriptions, links, and tech details]
-- Proof cards: [Certificate, screenshot, award, or document details]
+- CV file path: rica-simbulan-resume.pdf
+- Project links currently point to the proof section unless you later add external links
+- Images: add screenshots/certificates to an images/ folder and update the inline background-image styles
 
 Proof image tip:
 Use the existing proof placeholder divs. To add a picture later, upload the
 image beside this file or in a folder, then add an inline style like:
-style="background-image: url('proofs/certificate-name.jpg');"
+style="background-image: url('images/certificate-name.jpg');"
 Keep the aria-label updated with a short description of the proof.
 -->
 <!DOCTYPE html>
@@ -39,18 +36,18 @@ Keep the aria-label updated with a short description of the proof.
       <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
       </button>
-      <a class="logo" href="#top" aria-label="Rica May Simbulan home">rica simbulan</a>
+      <a class="logo" href="#top" aria-label="Rica May Simbulan home">Rica Portfolio</a>
       <div class="nav-menu" id="nav-menu">
         <div class="nav-links">
-          <a class="nav-link" href="#projects">work</a>
-          <a class="nav-link" href="#about">about</a>
-          <a class="nav-link" href="#skills">skills</a>
-          <a class="nav-link" href="#contact">contact</a>
+          <a class="nav-link" href="#home">Overview</a>
+          <a class="nav-link" href="#projects">Work</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
         <div class="nav-socials" aria-label="Profile links">
-          <a href="https://github.com/miss-blue" target="_blank" rel="noopener noreferrer">GH</a>
-          <a href="https://ph.jobstreet.com/profiles/ricamay-simbulan-hBLGWqVy5h" target="_blank" rel="noopener noreferrer">JS</a>
-          <a href="mailto:simbulanricamay18@gmail.com">mail</a>
+          <a href="https://github.com/miss-blue" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://ph.jobstreet.com/profiles/ricamay-simbulan-hBLGWqVy5h" target="_blank" rel="noopener noreferrer">Jobstreet</a>
         </div>
       </div>
     </nav>
@@ -68,18 +65,39 @@ Keep the aria-label updated with a short description of the proof.
       </div>
       <div class="container hero-center">
         <div class="hero-copy">
-          <h1 class="hero-title hero-animate">Hi! I'm Rica Simbulan. <span>I'm a fresh graduate based in Dagupan City.</span></h1>
-          <p class="hero-subtitle hero-animate">BS Computer Science · Aspiring [Your Field]</p>
-          <p class="hero-tagline hero-animate">[Write one sentence about the kind of technology, design, or problem-solving work you are passionate about.]</p>
+          <p class="hero-eyebrow hero-animate">Fresh Graduate Portfolio</p>
+          <h1 class="hero-title hero-animate">Rica May Simbulan Portfolio.</h1>
+          <p class="hero-subtitle hero-animate">BS Computer Science · Project Manager · Emerging Technology Leader</p>
+          <p class="hero-tagline hero-animate">I build people-centered systems, lead student and software projects, and turn ideas into organized, real-world solutions.</p>
           <div class="hero-actions hero-animate">
             <a class="btn btn-primary" href="#projects">View My Work</a>
-            <a class="btn btn-outline" href="[ADD-CV-PDF-FILENAME].pdf" download>Download CV</a>
+            <a class="btn btn-outline" href="rica-simbulan-resume.pdf" download>Download CV</a>
           </div>
-          <a class="scroll-cue hero-animate" href="#projects" aria-label="Scroll to projects">
-            <span>Scroll down to see my work!</span>
-            <i aria-hidden="true"></i>
-          </a>
         </div>
+
+        <div class="hero-preview hero-animate" aria-label="Portfolio preview cards">
+          <article class="preview-card preview-work">
+            <span class="preview-label">Work Gallery</span>
+            <div class="preview-mosaic">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="preview-card preview-about">
+            <span class="preview-label">About Page</span>
+            <div class="preview-lines">
+              <span></span><span></span><span></span>
+            </div>
+          </article>
+          <article class="preview-card preview-contact">
+            <span class="preview-label">Contact</span>
+            <div class="preview-button"></div>
+          </article>
+        </div>
+
+        <a class="scroll-cue hero-animate" href="#projects" aria-label="Scroll to projects">
+          <span>Explore the portfolio</span>
+          <i aria-hidden="true"></i>
+        </a>
       </div>
     </section>
 
@@ -88,10 +106,10 @@ Keep the aria-label updated with a short description of the proof.
         <div class="container about-grid">
           <div class="about-text">
             <h2 class="section-heading">About Me</h2>
-            <p>[Replace this with a short introduction about who you are as a fresh graduate and what kind of work excites you.]</p>
-            <p>[Add a sentence about your academic background, projects, internships, or learning experiences that shaped your skills.]</p>
-            <p>[Mention the roles, teams, or industries you hope to grow in, and the strengths you want employers to remember.]</p>
-            <p>[Close with a warm sentence about your eagerness to keep learning, collaborate, and contribute.]</p>
+            <p>I am a graduating BS Computer Science student at Universidad de Dagupan with experience in project management, system development, records administration, student leadership, and creative production.</p>
+            <p>My work connects technology and communication, from developing transportation and voting systems to managing enterprise software projects and directing award-winning tourism and advocacy videos.</p>
+            <p>I enjoy leading teams, organizing requirements, writing clear documentation, and building systems that solve real problems for students, commuters, schools, and communities.</p>
+            <p>I am open to internships, entry-level roles, and collaborations where I can contribute as a developer, project coordinator, technical documenter, or emerging technology leader.</p>
             <div class="chip-row" aria-label="Profile highlights">
               <span class="stat-chip">🎓 BS Computer Science</span>
               <span class="stat-chip">📍 Dagupan City</span>
@@ -101,7 +119,7 @@ Keep the aria-label updated with a short description of the proof.
 
           <aside class="quote-card" aria-label="Fun fact or personal quote">
             <span class="quote-mark" aria-hidden="true">“</span>
-            <p>[Add a favorite quote, personal motto, or fun fact that gives visitors a glimpse of your personality.]</p>
+            <p>Technology and people are most powerful when they work together with intention.</p>
           </aside>
         </div>
       </div>
@@ -115,34 +133,34 @@ Keep the aria-label updated with a short description of the proof.
             <article class="skill-group">
               <span class="category-pill">Languages</span>
               <div class="skill-tags">
-                <span class="skill-tag pill-sky">HTML</span>
-                <span class="skill-tag pill-purple">CSS</span>
-                <span class="skill-tag pill-pink">JavaScript</span>
-                <span class="skill-tag pill-cream">Python</span>
-                <span class="skill-tag pill-mint">Java</span>
-                <span class="skill-tag pill-sky">SQL</span>
+                <span class="skill-tag pill-sky">System Design</span>
+                <span class="skill-tag pill-purple">Web Development</span>
+                <span class="skill-tag pill-pink">Database Management</span>
+                <span class="skill-tag pill-cream">Network Planning</span>
+                <span class="skill-tag pill-mint">Technical Documentation</span>
+                <span class="skill-tag pill-sky">Research Development</span>
               </div>
             </article>
 
             <article class="skill-group">
-              <span class="category-pill">Frameworks</span>
+              <span class="category-pill">Management</span>
               <div class="skill-tags">
-                <span class="skill-tag pill-purple">Bootstrap</span>
-                <span class="skill-tag pill-pink">Tailwind Basics</span>
-                <span class="skill-tag pill-cream">Responsive Design</span>
-                <span class="skill-tag pill-mint">REST APIs</span>
-                <span class="skill-tag pill-sky">Database Design</span>
+                <span class="skill-tag pill-purple">Project Management</span>
+                <span class="skill-tag pill-pink">Agile / Waterfall</span>
+                <span class="skill-tag pill-cream">Event Production</span>
+                <span class="skill-tag pill-mint">Logistics Planning</span>
+                <span class="skill-tag pill-sky">Quality Assurance</span>
               </div>
             </article>
 
             <article class="skill-group">
-              <span class="category-pill">Tools</span>
+              <span class="category-pill">Communication</span>
               <div class="skill-tags">
-                <span class="skill-tag pill-pink">Git</span>
-                <span class="skill-tag pill-cream">GitHub</span>
-                <span class="skill-tag pill-mint">VS Code</span>
-                <span class="skill-tag pill-sky">Figma</span>
-                <span class="skill-tag pill-purple">Canva</span>
+                <span class="skill-tag pill-pink">Public Relations</span>
+                <span class="skill-tag pill-cream">Video Direction</span>
+                <span class="skill-tag pill-mint">Storytelling</span>
+                <span class="skill-tag pill-sky">Report Writing</span>
+                <span class="skill-tag pill-purple">Student Leadership</span>
               </div>
             </article>
           </div>
@@ -161,16 +179,16 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-card"></span>
               </div>
               <div class="project-content">
-                <h3>[Project One Title]</h3>
-                <p>[Describe the project goal, your role, and the result in two to three concise lines.]</p>
+                <h3>JEEPNI - Know Before You Go</h3>
+                <p>Thesis project and real-time commuter tracking system designed to help passengers make smarter trip decisions through route visibility and trip logging.</p>
                 <div class="tech-tags" aria-label="Project one technologies">
-                  <span class="tech-tag pill-sky">HTML</span>
-                  <span class="tech-tag pill-purple">CSS</span>
-                  <span class="tech-tag pill-pink">JavaScript</span>
+                  <span class="tech-tag pill-sky">Thesis</span>
+                  <span class="tech-tag pill-purple">Project Manager</span>
+                  <span class="tech-tag pill-pink">Developer</span>
                 </div>
                 <div class="project-links">
-                  <a href="[PROJECT-ONE-GITHUB-URL]" aria-label="Project one GitHub repository">GitHub →</a>
-                  <a href="[PROJECT-ONE-LIVE-DEMO-URL]" aria-label="Project one live demo">Live Demo →</a>
+                  <a href="#proofs-title" aria-label="JEEPNI proof section link">Project Docs →</a>
+                  <a href="#proofs-title" aria-label="JEEPNI demo or proof section link">Demo / Proof →</a>
                 </div>
               </div>
             </article>
@@ -181,16 +199,16 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-orbit"></span>
               </div>
               <div class="project-content">
-                <h3>[Project Two Title]</h3>
-                <p>[Explain what problem this project solves and which features you are proud of building.]</p>
+                <h3>InnoVote - Digital Voting System</h3>
+                <p>Fully functional voting system developed to support organized, transparent campus voting processes with coordinated team delivery.</p>
                 <div class="tech-tags" aria-label="Project two technologies">
-                  <span class="tech-tag pill-cream">Python</span>
-                  <span class="tech-tag pill-mint">SQL</span>
-                  <span class="tech-tag pill-sky">GitHub</span>
+                  <span class="tech-tag pill-cream">Voting System</span>
+                  <span class="tech-tag pill-mint">Developer</span>
+                  <span class="tech-tag pill-sky">Team Lead</span>
                 </div>
                 <div class="project-links">
-                  <a href="[PROJECT-TWO-GITHUB-URL]" aria-label="Project two GitHub repository">GitHub →</a>
-                  <a href="[PROJECT-TWO-LIVE-DEMO-URL]" aria-label="Project two live demo">Live Demo →</a>
+                  <a href="#proofs-title" aria-label="InnoVote proof section link">Project Docs →</a>
+                  <a href="#proofs-title" aria-label="InnoVote demo or proof section link">Demo / Proof →</a>
                 </div>
               </div>
             </article>
@@ -201,16 +219,16 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-spark"></span>
               </div>
               <div class="project-content">
-                <h3>[Project Three Title]</h3>
-                <p>[Share the project context, the tools you used, and how it helped you practice real-world skills.]</p>
+                <h3>Network Infrastructure Proposal</h3>
+                <p>Complete network scaling and infrastructure proposal for Futura Fora Dagupan Condominium, reviewed and accepted by the company.</p>
                 <div class="tech-tags" aria-label="Project three technologies">
-                  <span class="tech-tag pill-purple">Java</span>
-                  <span class="tech-tag pill-pink">UI Design</span>
+                  <span class="tech-tag pill-purple">Network Design</span>
+                  <span class="tech-tag pill-pink">Proposal</span>
                   <span class="tech-tag pill-cream">Documentation</span>
                 </div>
                 <div class="project-links">
-                  <a href="[PROJECT-THREE-GITHUB-URL]" aria-label="Project three GitHub repository">GitHub →</a>
-                  <a href="[PROJECT-THREE-LIVE-DEMO-URL]" aria-label="Project three live demo">Live Demo →</a>
+                  <a href="#proofs-title" aria-label="Network proposal proof section link">Proposal →</a>
+                  <a href="#proofs-title" aria-label="Network proof section link">Proof →</a>
                 </div>
               </div>
             </article>
@@ -221,14 +239,14 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-lines"></span>
               </div>
               <div class="project-content">
-                <h3>[Certificate Highlight]</h3>
-                <p>[Add a certificate, training proof, seminar proof, or award you want employers to notice.]</p>
+                <h3>Award-Winning Video Direction</h3>
+                <p>Directed tourism and advocacy videos across Pangasinan, including winning works for Miss Hundred Islands, Limgas na Pangasinan, and Miss Universe Philippines Pangasinan.</p>
                 <div class="tech-tags" aria-label="Certificate tags">
-                  <span class="tech-tag pill-pink">Proof</span>
-                  <span class="tech-tag pill-cream">Certificate</span>
+                  <span class="tech-tag pill-pink">Director</span>
+                  <span class="tech-tag pill-cream">Storytelling</span>
                 </div>
                 <div class="project-links">
-                  <a href="[CERTIFICATE-LINK-OR-FILE]" aria-label="Certificate proof link">View Proof →</a>
+                  <a href="#proofs-title" aria-label="Video direction proof section link">View Proof →</a>
                 </div>
               </div>
             </article>
@@ -239,14 +257,14 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-sticker"></span>
               </div>
               <div class="project-content">
-                <h3>[Thesis or Practicum Proof]</h3>
-                <p>[Use this tile for thesis output, practicum evidence, internship documents, or screenshots.]</p>
+                <h3>E-Thesis System Delivery</h3>
+                <p>Led and delivered an E-Thesis System through Arzatech Games and Solutions, supporting academic use and school adoption.</p>
                 <div class="tech-tags" aria-label="Document proof tags">
-                  <span class="tech-tag pill-sky">Proof</span>
-                  <span class="tech-tag pill-lime">Document</span>
+                  <span class="tech-tag pill-sky">Project Manager</span>
+                  <span class="tech-tag pill-lime">Enterprise System</span>
                 </div>
                 <div class="project-links">
-                  <a href="[DOCUMENT-LINK-OR-FILE]" aria-label="Document proof link">View Proof →</a>
+                  <a href="#proofs-title" aria-label="E-Thesis System proof section link">View Proof →</a>
                 </div>
               </div>
             </article>
@@ -257,14 +275,14 @@ Keep the aria-label updated with a short description of the proof.
                 <span class="visual-shape shape-marker"></span>
               </div>
               <div class="project-content">
-                <h3>[Design or UI Screenshot]</h3>
-                <p>[Add a screenshot of an interface, prototype, report, or school project presentation.]</p>
+                <h3>Event Production Leadership</h3>
+                <p>Managed planning, communication, logistics, documentation, and backstage operations for major university events and pageants.</p>
                 <div class="tech-tags" aria-label="Screenshot proof tags">
-                  <span class="tech-tag pill-purple">Screenshot</span>
-                  <span class="tech-tag pill-pink">UI</span>
+                  <span class="tech-tag pill-purple">Production</span>
+                  <span class="tech-tag pill-pink">Communication</span>
                 </div>
                 <div class="project-links">
-                  <a href="[SCREENSHOT-LINK-OR-FILE]" aria-label="Screenshot proof link">View Proof →</a>
+                  <a href="#proofs-title" aria-label="Event production proof section link">View Proof →</a>
                 </div>
               </div>
             </article>
@@ -277,36 +295,36 @@ Keep the aria-label updated with a short description of the proof.
           <div class="proofs" aria-labelledby="proofs-title">
             <div class="proofs-header">
               <h3 class="proofs-title" id="proofs-title">Proofs &amp; Highlights</h3>
-              <p>[Add certificates, project screenshots, awards, practicum proof, or other evidence here. Each block is ready for a background image.]</p>
+              <p>Add certificates, project screenshots, awards, practicum proof, and event documentation here. Each block is ready for a background image.</p>
             </div>
             <div class="proof-grid">
               <article class="proof-item">
                 <div class="proof-media" role="img" aria-label="[Add certificate proof image description here]">
-                  <span>[Certificate Screenshot]</span>
+                  <span>[Add Google / Cisco certificate image]</span>
                 </div>
                 <div class="proof-body">
-                  <h3>[Certificate or Award Title]</h3>
-                  <p>[Add issuer, date, and what this proof demonstrates.]</p>
+                  <h3>Google Project Management & Cisco Training</h3>
+                  <p>Project management, Agile, networking, cybersecurity, and digital transformation training from Google/Coursera and Cisco Networking Academy.</p>
                 </div>
               </article>
 
               <article class="proof-item">
                 <div class="proof-media" role="img" aria-label="[Add project screenshot description here]">
-                  <span>[Project Screenshot]</span>
+                  <span>[Add JEEPNI or InnoVote screenshot]</span>
                 </div>
                 <div class="proof-body">
-                  <h3>[Project Evidence Title]</h3>
-                  <p>[Add a short note about the feature, output, or milestone shown.]</p>
+                  <h3>System Screenshots & Demo Proof</h3>
+                  <p>Use this card for project screenshots, demo clips, thesis evidence, system dashboards, or deployment proof.</p>
                 </div>
               </article>
 
               <article class="proof-item">
                 <div class="proof-media" role="img" aria-label="[Add document or achievement proof description here]">
-                  <span>[Achievement Proof]</span>
+                  <span>[Add award or event proof image]</span>
                 </div>
                 <div class="proof-body">
-                  <h3>[Achievement or Document Title]</h3>
-                  <p>[Add details for seminars, training, internship, thesis, or other proof.]</p>
+                  <h3>Awards, Leadership & Event Documentation</h3>
+                  <p>Use this card for video awards, student leadership certificates, event photos, production documents, and community involvement proof.</p>
                 </div>
               </article>
             </div>
