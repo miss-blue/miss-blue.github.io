@@ -14,8 +14,7 @@ Update or confirm these values before publishing:
 
 Proof image tip:
 Use the existing proof placeholder divs. To add a picture later, upload the
-image beside this file or in a folder, then add an inline style like:
-style="background-image: url('images/certificate-name.jpg');"
+image beside this file or in a folder, then add an inline style using your real image filename.
 Keep the aria-label updated with a short description of the proof.
 -->
 <!DOCTYPE html>
@@ -54,48 +53,100 @@ Keep the aria-label updated with a short description of the proof.
   </header>
 
   <main>
-    <section class="hero page-section section-reveal" id="home" aria-label="Portfolio introduction">
+    <section class="hero page-section section-reveal visible" id="home" aria-label="Interactive career journey map">
       <div class="hero-art" aria-hidden="true">
-        <span class="art-ribbon ribbon-blue"></span>
-        <span class="art-ribbon ribbon-coral"></span>
-        <span class="art-ribbon ribbon-lime"></span>
-        <span class="art-dot dot-one"></span>
-        <span class="art-dot dot-two"></span>
-        <span class="art-ring ring-one"></span>
+        <span class="map-cloud cloud-one"></span>
+        <span class="map-cloud cloud-two"></span>
+        <span class="map-cloud cloud-three"></span>
+        <span class="map-balloon"></span>
       </div>
-      <div class="container hero-center">
-        <div class="hero-copy">
-          <p class="hero-eyebrow hero-animate">Portfolio</p>
-          <h1 class="hero-title hero-animate">Rica May Simbulan Portfolio.</h1>
+      <div class="container hero-center hero-map-layout">
+        <div class="hero-copy journey-intro">
+          <p class="hero-eyebrow hero-animate">Career Journey Map</p>
+          <h1 class="hero-title hero-animate"><span>Drive through</span><span>Rica's portfolio.</span></h1>
           <p class="hero-subtitle hero-animate">BS Computer Science · Project Manager · Emerging Technology Leader</p>
-          <p class="hero-tagline hero-animate">I build people-centered systems, lead student and software projects, and turn ideas into organized, real-world solutions.</p>
+          <p class="hero-tagline hero-animate">Follow the route through projects, leadership work, certifications, creative production, and community highlights.</p>
           <div class="hero-actions hero-animate">
-            <a class="btn btn-primary" href="#projects">View My Work</a>
+            <a class="btn btn-primary" href="#projects">See the Stops</a>
             <a class="btn btn-outline" href="rica-simbulan-resume.pdf" download>Download CV</a>
           </div>
         </div>
 
-        <div class="hero-preview hero-animate" aria-label="Portfolio preview cards">
-          <article class="preview-card preview-work">
-            <span class="preview-label">Work Gallery</span>
-            <div class="preview-mosaic">
-              <span></span><span></span><span></span><span></span>
+        <div class="journey-board hero-animate" aria-label="Clickable career route">
+          <div class="journey-map-header">
+            <span>Rica's Route</span>
+            <strong>Credentials unlocked along the way</strong>
+          </div>
+
+          <div class="journey-stage" id="journey-stage">
+            <svg class="journey-road" viewBox="0 0 900 560" preserveAspectRatio="none" aria-hidden="true">
+              <path class="road-shadow" d="M88 476 C190 430 150 350 284 334 C420 318 332 220 486 206 C624 194 582 112 716 96 C792 88 824 74 858 42"></path>
+              <path class="road-main" d="M88 476 C190 430 150 350 284 334 C420 318 332 220 486 206 C624 194 582 112 716 96 C792 88 824 74 858 42"></path>
+              <path class="road-dash" d="M88 476 C190 430 150 350 284 334 C420 318 332 220 486 206 C624 194 582 112 716 96 C792 88 824 74 858 42"></path>
+            </svg>
+
+            <span class="mountain mountain-one"></span>
+            <span class="mountain mountain-two"></span>
+            <span class="mountain mountain-three"></span>
+            <span class="tiny-tree tree-one"></span>
+            <span class="tiny-tree tree-two"></span>
+            <span class="tiny-tree tree-three"></span>
+            <span class="tiny-tree tree-four"></span>
+            <span class="tiny-tree tree-five"></span>
+
+            <div class="route-car" id="route-car" aria-hidden="true">
+              <span class="car-top"></span>
+              <span class="car-body"></span>
+              <span class="car-wheel wheel-left"></span>
+              <span class="car-wheel wheel-right"></span>
             </div>
-          </article>
-          <article class="preview-card preview-about">
-            <span class="preview-label">About Page</span>
-            <div class="preview-lines">
-              <span></span><span></span><span></span>
-            </div>
-          </article>
-          <article class="preview-card preview-contact">
-            <span class="preview-label">Contact</span>
-            <div class="preview-button"></div>
-          </article>
+
+            <button class="journey-stop active" type="button" style="--stop-x: 10%; --stop-y: 82%;" data-title="Fresh Graduate" data-copy="BS Computer Science graduate from Universidad de Dagupan, ready for entry-level roles where technology, documentation, and teamwork matter." data-link="#about" data-car-x="10%" data-car-y="82%" data-rotation="-18deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">Start</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 28%; --stop-y: 62%;" data-title="JEEPNI Thesis Project" data-copy="Real-time commuter tracking system built to support route visibility, trip logging, and better passenger decisions." data-link="#jeepni-proof" data-car-x="27%" data-car-y="64%" data-rotation="-6deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">JEEPNI</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 44%; --stop-y: 43%;" data-title="Project Management Credentials" data-copy="Training proof in foundations, initiation, planning, execution, and Agile delivery for organized project work." data-link="#project-management-proof" data-car-x="43%" data-car-y="45%" data-rotation="-18deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">PM Certs</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 56%; --stop-y: 34%;" data-title="Network Proposal" data-copy="Accepted network scaling and infrastructure proposal for Futura Fora Dagupan Condominium." data-link="#network-proof" data-car-x="56%" data-car-y="36%" data-rotation="-6deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">Network</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 66%; --stop-y: 24%;" data-title="E-Thesis System Delivery" data-copy="Project management and delivery support for an E-Thesis System through Arzatech Games and Solutions." data-link="#ethesis-proof" data-car-x="66%" data-car-y="26%" data-rotation="-19deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">E-Thesis</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 77%; --stop-y: 17%;" data-title="Creative Direction" data-copy="Tourism, advocacy, marketing, performance, and lyrics-writing work supported by public proof and production screenshots." data-link="#creative-proof" data-car-x="77%" data-car-y="19%" data-rotation="-9deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">Creative</span>
+            </button>
+
+            <button class="journey-stop" type="button" style="--stop-x: 88%; --stop-y: 8%;" data-title="Leadership & Community" data-copy="Student leadership, DepEd feature evidence, international school representation, Project Kaakbay, and youth convergence highlights." data-link="#leadership-proof" data-car-x="88%" data-car-y="10%" data-rotation="-28deg">
+              <span class="stop-pin"></span>
+              <span class="stop-label">Lead</span>
+            </button>
+          </div>
+
+          <aside class="journey-card" id="journey-card" aria-live="polite">
+            <span class="journey-card-kicker">Current Stop</span>
+            <h2 id="journey-card-title">Fresh Graduate</h2>
+            <p id="journey-card-copy">BS Computer Science graduate from Universidad de Dagupan, ready for entry-level roles where technology, documentation, and teamwork matter.</p>
+            <a class="journey-card-link" id="journey-card-link" href="#about">View this proof</a>
+          </aside>
         </div>
 
-        <a class="scroll-cue hero-animate" href="#projects" aria-label="Scroll to projects">
-          <span>Explore the portfolio</span>
+        <a class="scroll-cue hero-animate" href="#projects" aria-label="Scroll to selected work">
+          <span>Scroll to continue the route</span>
           <i aria-hidden="true"></i>
         </a>
       </div>
@@ -174,7 +225,7 @@ Keep the aria-label updated with a short description of the proof.
           <h2 class="section-heading centered-heading">Selected Work</h2>
           <div class="project-grid">
             <article class="project-card">
-              <div class="project-visual visual-photo" role="img" aria-label="Regional Pitching Competition recognition for JEEPNI" style="background-image: url('images/Regional Pitching Competition.png');"></div>
+              <div class="project-visual visual-photo" role="img" aria-label="JEEPNI landing page screenshot" style="background-image: url('images/JeepNi Landing page.png');"></div>
               <div class="project-content">
                 <h3>JEEPNI - Know Before You Go</h3>
                 <p>Thesis project and real-time commuter tracking system designed to help passengers make smarter trip decisions through route visibility and trip logging.</p>
@@ -184,8 +235,8 @@ Keep the aria-label updated with a short description of the proof.
                   <span class="tech-tag pill-pink">Developer</span>
                 </div>
                 <div class="project-links">
-                  <a href="#proofs-title" aria-label="JEEPNI proof section link">Project Docs →</a>
-                  <a href="#proofs-title" aria-label="JEEPNI demo or proof section link">Demo / Proof →</a>
+                  <a href="#jeepni-proof" aria-label="JEEPNI proof section link">Project Docs →</a>
+                  <a href="#jeepni-proof" aria-label="JEEPNI demo or proof section link">Demo / Proof →</a>
                 </div>
               </div>
             </article>
@@ -224,17 +275,14 @@ Keep the aria-label updated with a short description of the proof.
                   <span class="tech-tag pill-cream">Documentation</span>
                 </div>
                 <div class="project-links">
-                  <a href="#proofs-title" aria-label="Network proposal proof section link">Proposal →</a>
-                  <a href="#proofs-title" aria-label="Network proof section link">Proof →</a>
+                  <a href="#network-proof" aria-label="Network proposal proof section link">Proposal →</a>
+                  <a href="#network-proof" aria-label="Network proof section link">Proof →</a>
                 </div>
               </div>
             </article>
 
             <article class="project-card proof-tile">
-              <div class="project-visual visual-coral" aria-hidden="true">
-                <span class="visual-shape shape-badge"></span>
-                <span class="visual-shape shape-lines"></span>
-              </div>
+              <div class="project-visual visual-photo" role="img" aria-label="Facebook proof of Rica May Simbulan as tourism video director" style="background-image: url('images/DIRECTOR.png');"></div>
               <div class="project-content">
                 <h3>Award-Winning Video Direction</h3>
                 <p>Directed tourism and advocacy videos across Pangasinan, including winning works for Miss Hundred Islands, Limgas na Pangasinan, and Miss Universe Philippines Pangasinan.</p>
@@ -243,7 +291,7 @@ Keep the aria-label updated with a short description of the proof.
                   <span class="tech-tag pill-cream">Storytelling</span>
                 </div>
                 <div class="project-links">
-                  <a href="#proofs-title" aria-label="Video direction proof section link">View Proof →</a>
+                  <a href="https://www.facebook.com/share/p/1BHCRTyRhK/" target="_blank" rel="noopener noreferrer" aria-label="Video direction Facebook proof link">View Proof →</a>
                 </div>
               </div>
             </article>
@@ -261,16 +309,13 @@ Keep the aria-label updated with a short description of the proof.
                   <span class="tech-tag pill-lime">Enterprise System</span>
                 </div>
                 <div class="project-links">
-                  <a href="#proofs-title" aria-label="E-Thesis System proof section link">View Proof →</a>
+                  <a href="#ethesis-proof" aria-label="E-Thesis System proof section link">View Proof →</a>
                 </div>
               </div>
             </article>
 
             <article class="project-card proof-tile">
-              <div class="project-visual visual-mix" aria-hidden="true">
-                <span class="visual-shape shape-grid"></span>
-                <span class="visual-shape shape-marker"></span>
-              </div>
+              <div class="project-visual visual-photo" role="img" aria-label="Communication head and event production evidence" style="background-image: url('images/COMMUNICATION HEAD.png');"></div>
               <div class="project-content">
                 <h3>Event Production Leadership</h3>
                 <p>Managed planning, communication, logistics, documentation, and backstage operations for major university events and pageants.</p>
@@ -279,7 +324,7 @@ Keep the aria-label updated with a short description of the proof.
                   <span class="tech-tag pill-pink">Communication</span>
                 </div>
                 <div class="project-links">
-                  <a href="#proofs-title" aria-label="Event production proof section link">View Proof →</a>
+                  <a href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Event production Facebook proof link">View Proof →</a>
                 </div>
               </div>
             </article>
@@ -292,7 +337,7 @@ Keep the aria-label updated with a short description of the proof.
           <div class="proofs" aria-labelledby="proofs-title">
             <div class="proofs-header">
               <h3 class="proofs-title" id="proofs-title">Proofs &amp; Highlights</h3>
-              <p>Certificates, competition proof, and training evidence. Add more screenshots later by placing files in the images folder and adding another card here.</p>
+              <p>Certificates, competition proof, Facebook evidence, leadership documentation, training records, and event highlights.</p>
             </div>
             <div class="proof-grid">
               <article class="proof-item">
@@ -306,6 +351,117 @@ Keep the aria-label updated with a short description of the proof.
               </article>
 
               <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/JeepNi Landing page.png" alt="JEEPNI landing page screenshot">
+                </div>
+                <div class="proof-body">
+                  <h3>JEEPNI Landing Page</h3>
+                  <p>System screenshot showing the JEEPNI interface and project presentation.</p>
+                </div>
+              </article>
+
+              <article class="proof-item" id="jeepni-proof">
+                <div class="proof-media">
+                  <img src="images/jeepni cert of  COMPLETION.jpg" alt="JEEPNI certificate of completion">
+                </div>
+                <div class="proof-body">
+                  <h3>JEEPNI Certificate of Completion</h3>
+                  <p>Completion proof for the JEEPNI thesis/project output.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/jeepni cert of VALIDATION.jpg" alt="JEEPNI certificate of validation">
+                </div>
+                <div class="proof-body">
+                  <h3>JEEPNI Certificate of Validation</h3>
+                  <p>Validation proof supporting the JEEPNI system and thesis work.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/jeepni cert of UTILIZATION.jpg" alt="JEEPNI certificate of utilization">
+                </div>
+                <div class="proof-body">
+                  <h3>JEEPNI Certificate of Utilization</h3>
+                  <p>Utilization proof showing JEEPNI's institutional or practical use.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/jeepni cert of UTILIATION.jpg" alt="Additional JEEPNI utilization certificate">
+                </div>
+                <div class="proof-body">
+                  <h3>JEEPNI Utilization Proof</h3>
+                  <p>Additional utilization evidence for the JEEPNI project.</p>
+                </div>
+              </article>
+
+              <article class="proof-item" id="ethesis-proof">
+                <div class="proof-media">
+                  <img src="images/E-thesis.png" alt="E-Thesis system screenshot">
+                </div>
+                <div class="proof-body">
+                  <h3>E-Thesis System Screenshot</h3>
+                  <p>System screenshot supporting the E-Thesis delivery and academic-use claim.</p>
+                </div>
+              </article>
+
+              <article class="proof-item" id="network-proof">
+                <div class="proof-media">
+                  <img src="images/scaling network futura letter of acceptance.jpg" alt="Scaling Network Futura letter of acceptance">
+                </div>
+                <div class="proof-body">
+                  <h3>Network Proposal Acceptance</h3>
+                  <p>Letter of acceptance for the Futura Fora Dagupan network infrastructure proposal.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/Scaling Network Futura passed.jpg" alt="Scaling Network Futura proposal passed proof">
+                </div>
+                <div class="proof-body">
+                  <h3>Network Proposal Passed</h3>
+                  <p>Additional proof that the network scaling proposal was reviewed and passed.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/Region 1.png" alt="Region 1 evidence">
+                </div>
+                <div class="proof-body">
+                  <h3>Region 1 Evidence</h3>
+                  <p>Regional-level evidence connected to competition, presentation, or recognition work.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/Most Visited Booth.jpg" alt="Most Visited Booth recognition">
+                </div>
+                <div class="proof-body">
+                  <h3>Most Visited Booth</h3>
+                  <p>Recognition proof for booth engagement and presentation impact.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/18qUZLvv7P/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for picture with Sir Renato">
+                  <img src="images/MOST OUTSTANDING STUDENT.jpg" alt="Most Outstanding Student recognition photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Most Outstanding Student Recognition</h3>
+                  <p>Recognition photo used as supporting evidence for academic distinction.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/18qUZLvv7P/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item" id="project-management-proof">
                 <div class="proof-media">
                   <img src="images/Foundations of Project Management.png" alt="Foundations of Project Management certificate">
                 </div>
@@ -414,6 +570,388 @@ Keep the aria-label updated with a short description of the proof.
                   <p>Balangay Workshop proof from Arweave PH, Pangasinan.</p>
                 </div>
               </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/Accreditation.jpg" alt="Accreditation evidence">
+                </div>
+                <div class="proof-body">
+                  <h3>Accreditation Support</h3>
+                  <p>Evidence connected to accreditation, documentation, and quality assurance support work.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1D78TDXKCA/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for PGDX">
+                  <img src="images/PGDX.png" alt="Philippine GameDev Expo evidence">
+                </a>
+                <div class="proof-body">
+                  <h3>Philippine GameDev Expo 2024</h3>
+                  <p>Evidence of participation in PGDX Manila 2024 educational and professional workshop activities.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1D78TDXKCA/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/18edL1S5xH/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for PGDX 2">
+                  <img src="images/PGDX2.jpg" alt="Additional Philippine GameDev Expo evidence">
+                </a>
+                <div class="proof-body">
+                  <h3>PGDX Additional Proof</h3>
+                  <p>Additional evidence from the Philippine GameDev Expo experience.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/18edL1S5xH/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/PERFORMER.jpg" alt="Performer evidence photo">
+                </div>
+                <div class="proof-body">
+                  <h3>Performer</h3>
+                  <p>Evidence of creative participation and stage performance.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1GE7Coa7gG/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for lyrics writer">
+                  <img src="images/LYRICS WRITER.png" alt="Lyrics writer Facebook proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Lyrics Writer</h3>
+                  <p>Creative writing and production contribution proof.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1GE7Coa7gG/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item" id="creative-proof">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BHCRTyRhK/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for director work">
+                  <img src="images/DIRECTOR.png" alt="Director Facebook proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Tourism Video Director</h3>
+                  <p>Facebook proof crediting Rica May Simbulan as director for a tourism video production.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BHCRTyRhK/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BHCRTyRhK/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for director work second image">
+                  <img src="images/DIRECTOR 2.png" alt="Additional director Facebook proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Director Credit - Additional Proof</h3>
+                  <p>Additional screenshot supporting video direction and production credit.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BHCRTyRhK/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for marketing event">
+                  <img src="images/MARKETING EVENT.png" alt="Marketing event proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Marketing Event</h3>
+                  <p>Evidence of marketing and event participation work.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <div class="proof-media">
+                  <img src="images/Binibining UDD as organizers and facilitator.jpg" alt="Binibining UDD organizers and facilitator evidence">
+                </div>
+                <div class="proof-body">
+                  <h3>Binibining UDD Organizer &amp; Facilitator</h3>
+                  <p>Event production evidence from organizing and facilitation work for Binibining UDD.</p>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1EmPhsRXHG/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for marketing video">
+                  <img src="images/MARKETING VIDEO.png" alt="Marketing video proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Marketing Video</h3>
+                  <p>Video proof connected to marketing and promotional work.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1EmPhsRXHG/" target="_blank" rel="noopener noreferrer">Watch Facebook Video →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for communication head">
+                  <img src="images/COMMUNICATION HEAD.png" alt="Communication head proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Communication Head</h3>
+                  <p>Evidence of event communication and coordination responsibilities.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for communication head image 2">
+                  <img src="images/COMMUNICATION HEAD 2.png" alt="Communication head second proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Communication Head - Planning</h3>
+                  <p>Additional proof for communication planning and coordination work.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for communication head image 3">
+                  <img src="images/COMMUNICATION HEAD 3.png" alt="Communication head third proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Communication Head - Event Work</h3>
+                  <p>Additional proof for event communication responsibilities.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for communication head image 4">
+                  <img src="images/COMMUNICATION HEAD 4.png" alt="Communication head fourth proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Communication Head - Documentation</h3>
+                  <p>Additional screenshot supporting event production and communications work.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1DDyofA3Wb/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item" id="leadership-proof">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for SSG president">
+                  <img src="images/SSG PRESIDENT.png" alt="SSG President proof">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President</h3>
+                  <p>Leadership proof from Supreme Student Government service.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer" aria-label="Open additional Facebook proof for SSG president">
+                  <img src="images/SSG PRESIDENT1.png" alt="Additional SSG President proof">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President - Additional Proof</h3>
+                  <p>Additional leadership evidence from SSG activities.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for SSG president additional screenshot">
+                  <img src="images/SSGPRESIDENT.png" alt="SSG President additional screenshot">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President - Leadership Evidence</h3>
+                  <p>Additional screenshot for elected student leadership.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for principal SSG president posting">
+                  <img src="images/SSG PRESIDENT POSTING FROM MY PRINCIPAL BACK THEN.png" alt="Principal posting about SSG President">
+                </a>
+                <div class="proof-body">
+                  <h3>Principal Posting - SSG President</h3>
+                  <p>School leadership support and public recognition evidence.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1FCARr4Uhq/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Balik-Aral activity">
+                  <img src="images/SSG PRESIDENT BALIK-ARAL.jpg" alt="SSG President Balik-Aral evidence">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President - Balik-Aral</h3>
+                  <p>Leadership evidence from school service and student support activities.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Balik Aral second image">
+                  <img src="images/SSG PRESIDENT BALIK ARAL.jpg" alt="SSG President Balik Aral second evidence">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President - Student Service</h3>
+                  <p>Additional evidence from student leadership service.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/v/1AuSwvYgFJ/" target="_blank" rel="noopener noreferrer">Watch Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1HCSwapZ4m/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for contest">
+                  <img src="images/CONTEST.png" alt="Contest proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Contest Proof</h3>
+                  <p>Evidence of competition participation or recognition.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1HCSwapZ4m/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/1BWxxrddSk/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay and UNILAB Foundation">
+                  <img src="images/UNILAB FOUNDATION.jpg" alt="UNILAB Foundation Project Kaakbay proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - UNILAB Foundation</h3>
+                  <p>Community health program involvement with Project Kaakbay and partners.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/1BWxxrddSk/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay">
+                  <img src="images/PROJECT KAAKBAY.jpg" alt="Project Kaakbay proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay</h3>
+                  <p>Community volunteer work and health program documentation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 1">
+                  <img src="images/PROJECT KAAKBAY 1.jpg" alt="Project Kaakbay first supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Field Activity</h3>
+                  <p>Additional Project Kaakbay community activity proof.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 2">
+                  <img src="images/PROJECT KAAKBAY 2.jpg" alt="Project Kaakbay second supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Volunteer Work</h3>
+                  <p>Additional volunteer service documentation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 3">
+                  <img src="images/PROJECT KAAKBAY 3.jpg" alt="Project Kaakbay third supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Partner Activity</h3>
+                  <p>Additional community and partner activity evidence.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 4">
+                  <img src="images/PROJECT KAAKBAY 4.jpg" alt="Project Kaakbay fourth supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Community Support</h3>
+                  <p>Additional Project Kaakbay service documentation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 5">
+                  <img src="images/PROJECT KAAKBAY 5.jpg" alt="Project Kaakbay fifth supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Program Evidence</h3>
+                  <p>Additional proof from Project Kaakbay community work.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Project Kaakbay image 6">
+                  <img src="images/PROJECT KAAKBAY 6.jpg" alt="Project Kaakbay sixth supporting photo">
+                </a>
+                <div class="proof-body">
+                  <h3>Project Kaakbay - Volunteer Evidence</h3>
+                  <p>Additional volunteer and community service proof.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BhSnWZ3s6/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1P2MfQMWeJ/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for DepEd Philippines feature">
+                  <img src="images/I WAS FEATURED IN DEP ED PHILIPPINES.png" alt="DepEd Philippines feature proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Featured by DepEd Philippines</h3>
+                  <p>Evidence of being featured in connection with student leadership and international competition representation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1P2MfQMWeJ/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/1D14kiLeMK/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for SSG president during international competition">
+                  <img src="images/SSG PRESIDENT DURING INTERNATIONAL COMPETITION.png" alt="SSG President during international competition proof">
+                </a>
+                <div class="proof-body">
+                  <h3>SSG President During International Competition</h3>
+                  <p>Leadership evidence from international competition representation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/1D14kiLeMK/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1bJitMRL6o/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for World's Best School competition">
+                  <img src="images/WORLDS BEST SCHOOL.png" alt="World's Best School competition proof">
+                </a>
+                <div class="proof-body">
+                  <h3>World's Best School Competition</h3>
+                  <p>Evidence connected to student voice and school representation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1bJitMRL6o/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BGWawP25s/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for voice of student body image 1">
+                  <img src="images/BECAME THE VOICE OF STUDENT BODY DURING THE WORLD'S BEST SCHOOL COMPETITION 1.jpg" alt="Voice of student body proof one">
+                </a>
+                <div class="proof-body">
+                  <h3>Voice of the Student Body</h3>
+                  <p>Evidence of representing student perspectives during the World's Best School competition.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BGWawP25s/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1BGWawP25s/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for voice of student body image 2">
+                  <img src="images/BECAME THE VOICE OF STUDENT BODY DURING THE WORLD'S BEST SCHOOL COMPETITION 2.jpg" alt="Voice of student body proof two">
+                </a>
+                <div class="proof-body">
+                  <h3>Student Body Representation</h3>
+                  <p>Additional evidence for student leadership representation.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1BGWawP25s/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
+
+              <article class="proof-item">
+                <a class="proof-media proof-media-link" href="https://www.facebook.com/share/p/1KhbHdmxXL/" target="_blank" rel="noopener noreferrer" aria-label="Open Facebook proof for Philippine Youth Convergence 2022">
+                  <img src="images/PHILIPPINE YOUTH CONVERGENCE 2022.jpg" alt="Philippine Youth Convergence 2022 proof">
+                </a>
+                <div class="proof-body">
+                  <h3>Philippine Youth Convergence 2022</h3>
+                  <p>Leadership and youth engagement evidence.</p>
+                  <a class="proof-link" href="https://www.facebook.com/share/p/1KhbHdmxXL/" target="_blank" rel="noopener noreferrer">View Facebook Proof →</a>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -491,6 +1029,13 @@ Keep the aria-label updated with a short description of the proof.
     const revealSections = document.querySelectorAll(".section-reveal");
     const contactForm = document.querySelector("#contact-form");
     const formStatus = document.querySelector("#form-status");
+    const journeyStops = document.querySelectorAll(".journey-stop");
+    const routeCar = document.querySelector("#route-car");
+    const journeyCardTitle = document.querySelector("#journey-card-title");
+    const journeyCardCopy = document.querySelector("#journey-card-copy");
+    const journeyCardLink = document.querySelector("#journey-card-link");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let journeyTimer;
 
     function updateHeaderShadow() {
       header.classList.toggle("scrolled", window.scrollY > 8);
@@ -512,6 +1057,38 @@ Keep the aria-label updated with a short description of the proof.
       });
     }
 
+    function activateJourneyStop(stop) {
+      if (!stop || !routeCar) {
+        return;
+      }
+
+      journeyStops.forEach((item) => {
+        const isActive = item === stop;
+        item.classList.toggle("active", isActive);
+        item.setAttribute("aria-pressed", String(isActive));
+      });
+
+      routeCar.style.setProperty("--car-x", stop.dataset.carX || "10%");
+      routeCar.style.setProperty("--car-y", stop.dataset.carY || "82%");
+      routeCar.style.setProperty("--car-rotation", stop.dataset.rotation || "-18deg");
+
+      journeyCardTitle.textContent = stop.dataset.title;
+      journeyCardCopy.textContent = stop.dataset.copy;
+      journeyCardLink.href = stop.dataset.link;
+    }
+
+    function startJourneyDrive() {
+      if (prefersReducedMotion || journeyStops.length < 2) {
+        return;
+      }
+
+      let currentStop = 0;
+      journeyTimer = window.setInterval(() => {
+        currentStop = (currentStop + 1) % journeyStops.length;
+        activateJourneyStop(journeyStops[currentStop]);
+      }, 4200);
+    }
+
     menuToggle.addEventListener("click", () => {
       const isOpen = navMenu.classList.toggle("open");
       menuToggle.setAttribute("aria-expanded", String(isOpen));
@@ -521,6 +1098,14 @@ Keep the aria-label updated with a short description of the proof.
       link.addEventListener("click", () => {
         navMenu.classList.remove("open");
         menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    journeyStops.forEach((stop) => {
+      stop.setAttribute("aria-pressed", String(stop.classList.contains("active")));
+      stop.addEventListener("click", () => {
+        window.clearInterval(journeyTimer);
+        activateJourneyStop(stop);
       });
     });
 
@@ -576,6 +1161,8 @@ Keep the aria-label updated with a short description of the proof.
 
     updateHeaderShadow();
     updateActiveLink();
+    activateJourneyStop(document.querySelector(".journey-stop.active"));
+    startJourneyDrive();
   </script>
 </body>
 </html>
